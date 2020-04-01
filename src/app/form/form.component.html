@@ -1,28 +1,28 @@
-<p>form works!</p>
-<div>
-  <h2 class="newquote">Add quote</h2>
-  <form (ngSubmit)='submitQuote()' #quoteForm="ngForm">
+<!-- <p>form works!</p> -->
+<div class="container-fluid">
+  <h2 class="text-center">Create a new Quote</h2>
+  <hr>
+  <form>
     <div class="form-group">
-      <label for="name">Quote title</label>
-      <input type="text" required class="form-control"[(ngModel)]="newQuote.name" name="name" #name='ngModel' placeholder="Enter the title">
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-        <p>Description is required</p>
-      </div>
+      <label for="author">Author</label>
+      <input type="text" required class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="publisher">Publisher</label>
+      <input type="text" required class="form-control" id="name">
     </div>
     <div class="form-group">
       <label for="quote">Quote</label>
-      <textarea class="form-control" rows="4"required[(ngModel)]="newQuote.description" name="quote" #quote='ngModel' placeholder="Enter the quote"></textarea>
-      <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-        <p>Quote is required</p>
-      </div>
+      <textarea class="form-control" id="quote" rows="4"required>
+      </textarea>
     </div>
     <div class="form-group">
-      <label for="name">Author's Name</label>
-      <input type="text" required class="form-control" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder="Enter the author">
-      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-        <p>Author is required</p>
-      </div>
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
     </div>
-    <button type="submit" class="btn btn-success btn-block" name="button">Add Quote</button>
+    <button type="submit" class="btn btn-success">Add Quote</button>
   </form>
 </div>
+
+
+

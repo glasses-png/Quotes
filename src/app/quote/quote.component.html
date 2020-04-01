@@ -18,7 +18,7 @@
           <div>
             <i class="fa fa-thumbs-up" aria-hidden="true" (click)="likeButtonClick(i)"></i>
             <i class="fa fa-thumbs-down ml-5" aria-hidden="true" (click)="dislikeButtonClick(i)"></i>
-            <p><strong>Likes:</strong>{{quote.numberOfLikes}} <span><strong>Dislikes:</strong>{{quote.numberOfDislikes}}</span></p>
+            <p><strong>Upvote:</strong>{{quote.numberOfLikes}} <span><strong>Downvote:</strong>{{quote.numberOfDislikes}}</span></p>
             </div>
             <button (click)='toggleDetails(i)' class="btn btn-success">Description</button>
             <app-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='quoteDelete($event,i)'>
